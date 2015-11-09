@@ -15,6 +15,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get signup_path
     assert_select "title", full_title("Sign up")
     
+    # Assess Login Pathes (per Ch9 Ex2)
     assert_select "a[href=?]", login_path
     log_in_as(@user)
     get root_path
